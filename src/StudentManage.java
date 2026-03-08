@@ -14,8 +14,8 @@ public class StudentManage {
             System.out.println("5.退出");
             System.out.println("请输入你想操作的序号：");
             int num2 = scanner.nextInt();
+            int count=0;
             if (num2 == 1) {
-                int count=0;
                 System.out.println("请输入需要添加学生的名字：");
                 String Stu_name = scanner.next();
                 System.out.println("请输入学生的成绩：");
@@ -27,7 +27,7 @@ public class StudentManage {
             }
             else if (num2 == 2) {
                 System.out.println("所有的学生有：");
-                for(int n=0;n<5;n++){
+                for(int n=0;n<count;n++){
                     System.out.println(Student[n][0]+"    "+Student[n][1]);
                 }
             }
@@ -40,6 +40,7 @@ public class StudentManage {
                         String Stu_score1 = scanner.next();
                         Student[n][1] = Stu_score1;
                         System.out.println("修改成功");
+                        break;
                     }
                     else if(!Stu_name1.equals(Student[n][0])){
                         System.out.println("该学生不存在");
