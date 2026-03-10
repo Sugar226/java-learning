@@ -31,7 +31,7 @@ public class StuManageooj {
                 System.out.println("所有学生有：");
                 for(int i=0;i<list.size();i++) {
                     Student stu=list.get(i);
-                    System.out.println(stu.getName());
+                    System.out.println(stu.getName()+stu.getScore());
                 }
             }
             else if(num1==3){
