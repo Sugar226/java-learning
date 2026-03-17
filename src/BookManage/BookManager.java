@@ -156,9 +156,9 @@ public class BookManager {
                     Book b = list.get(i);
                     if (Book_title.equals(b.getTitle())) {
                         isequals = true;
-                        if(!b.isBorrowed()) {
+                        if(b.isBorrowed()) {
                             System.out.println("成功还回该图书!");
-                            b.setBorrowed(true);
+                            b.setBorrowed(false);
                             break;
                         }
                         else{
